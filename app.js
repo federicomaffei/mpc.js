@@ -1,6 +1,4 @@
-var Hapi = require('hapi'),
-Path     = require('path'),
-nodemon  = require('nodemon');
+var Hapi = require('hapi');
 
 var server = new Hapi.Server();
 server.connection({ port: 3000 });

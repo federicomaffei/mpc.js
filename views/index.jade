@@ -13,24 +13,8 @@ html(lang="eng")
 							img(src="assets/images/akailogo.png")
 						div(class="four columns")
 				div#drummachine
-					div.row
-						div(class="three columns drumbutton")
-						div(class="three columns drumbutton")
-						div(class="three columns drumbutton")
-						div(class="three columns drumbutton")
-					div.row
-						div(class="three columns drumbutton")
-						div(class="three columns drumbutton")
-						div(class="three columns drumbutton")
-						div(class="three columns drumbutton")
-					div.row
-						div(class="three columns drumbutton")
-						div(class="three columns drumbutton")
-						div(class="three columns drumbutton")
-						div(class="three columns drumbutton")
-					div.row
-						div(class="three columns drumbutton")
-						div(class="three columns drumbutton")
-						div(class="three columns drumbutton")
-						div(class="three columns drumbutton")
+					- for (var rows = 1; rows <= 16; rows += 4)
+						div.row
+							- for (var columns = rows; columns < rows + 4; columns ++)
+								div(class="three columns drumbutton" id="button-#{columns}")
 
